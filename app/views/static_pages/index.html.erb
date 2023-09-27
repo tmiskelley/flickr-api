@@ -1,1 +1,9 @@
-<h1>My Photos</h1>
+<h1>My Flickr Photos</h1>
+
+<ul style="list-style-type: none;">
+  <% @photos.each do |photo_url| %>
+    <li>
+      <img src="<%= photo_url %>" alt="Flickr Photo">
+    </li>
+  <% end %>
+</ul>
