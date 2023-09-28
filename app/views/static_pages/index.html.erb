@@ -1,9 +1,11 @@
 <h1>My Flickr Photos</h1>
 
 <ul style="list-style-type: none;">
-  <% @photos.each do |photo_url| %>
-    <li>
-      <img src="<%= photo_url %>" alt="Flickr Photo">
-    </li>
+  <% if @user_id %>
+    <% @photos.each do |photo_url| %>
+      <li>
+        <img src="<%= photo_url %>" alt="Flickr Photo">
+      </li>
+    <% end %>
   <% end %>
 </ul>
